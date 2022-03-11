@@ -18,7 +18,7 @@ TEST_CASE("Vigenere cipher encryption: testing"){
 }
 
 
-TEST_CASE("Decryption: testing "){
+TEST_CASE("Decryption: testing"){
   CHECK(decryptCaesar(ciphertext, rshift) == "n");
   CHECK(decryptCaesar(ciphertext, rshift) == "n");
   CHECK(decryptCaesar(ciphertext, rshift) == "n");
