@@ -1,17 +1,23 @@
-main: main.o caesar.o
-	g++ -o main main.o caesar.o
+main: main.o caesar.o vigenere.o
+	g++ -o main main.o caesar.o vigenere.o
 
-tests: tests.o funcs.o
-	g++ -o tests tests.o something.o
+tests: tests.o caesar.o vigenere.o
+		g++ -o tests tests.o caesar.o vigenere.o
 
-test-ascii: test-ascii.cpp
-	g++ -o test-ascii test-ascii.cpp
+test-ascii: test-ascii.o
+			g++ -o test-ascii test-ascii.o
+
+main.o: main.cpp caesar.h vigenere.h
+
+vigenere.o: vigenere.cpp vigenere.h
 
 caesar.o: caesar.cpp caesar.h
 
-main.o: main.cpp caesar.h
 
-tests.o: tests.cpp doctest.h funcs.h
+tests.o: tests.cpp doctest.h caesar.h
+
+
+test-ascii.o: test-ascii.cpp
 
 clean:
-	rm -f main.o caesar.o tests.o main test-ascii
+	rm -f main.o caesar.o vigenere.o tests.o test-ascii.o

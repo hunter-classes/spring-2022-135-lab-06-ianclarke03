@@ -2,4 +2,4 @@
 #include <string>
 
 char shiftChar(char c, int rshift);
-std::string encryptVigenere(string plaintext, string keyword);
+std::string encryptVigenere(std::string plaintext, std::string keyword);
