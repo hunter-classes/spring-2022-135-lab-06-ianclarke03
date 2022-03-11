@@ -1,14 +1,14 @@
 #include <iostream>
 #include "caesar.h"
 #include "vigenere.h"
-//#include "decrypt.h"
+#include "decrypt.h"
 
 int main()
 {
   std::cout << "Task B. Implementing Caesar cipher encryption:\n";
   
   std::cout << "Enter plaintext: A Light-Year Apart\nEnter shift    : 10/nCiphertext     : " << encryptCaesar("A Light-Year Apart", 5) << "\n";
-  std::cout << "Enter plaintext: Hello, World!\nEnter shift    : 10/nCiphertext     : " << encryptCaesar("Hello, World!", 10") << "\n";
+  std::cout << "Enter plaintext: Hello, World!\nEnter shift    : 10/nCiphertext     : " << encryptCaesar("Hello, World!", 10) << "\n";
   std::cout << "\n";
 
 

@@ -27,7 +27,7 @@ std::string encryptCaesar(std::string plaintext, int rshift){
   char let;
   for (int i = 0; i < len; i++){
     let = shiftChar(plaintext[i], rshift);
-    str = str + let;
+    str += let;
 
   }
   std::cout << str << std::endl;
