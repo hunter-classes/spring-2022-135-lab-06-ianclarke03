@@ -20,4 +20,4 @@ tests.o: tests.cpp doctest.h caesar.h
 test-ascii.o: test-ascii.cpp
 
 clean:
-	rm -f main.o caesar.o vigenere.o tests.o test-ascii.o
+	rm -f main.o caesar.o vigenere.o tests.o test-ascii.o tests main

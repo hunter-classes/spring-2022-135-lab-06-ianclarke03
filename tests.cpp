@@ -15,10 +15,15 @@ TEST_CASE("Vigenere cipher encryption: testing"){
   CHECK(encryptVigenere("Hello, World!", "cake") == "Jevpq, Wyvnd!");
 }
 
-/*
-TEST_CASE("Decryption: testing"){
-  CHECK(decryptCaesar(ciphertext, rshift) == "n");
-  CHECK(decryptCaesar(ciphertext, rshift) == "n");
-  CHECK(decryptCaesar(ciphertext, rshift) == "n");
+
+
+TEST_CASE("Decryption with Caeser"){
+    CHECK(decryptCaesar("Rovvy, Gybvn!", 10) == "Hello, World!");
+    CHECK(decryptCaesar("Bfd yt Lt!", 5) == "Way to Go!");
+    CHECK(decryptCaesar("Rovvy, Gybvn!", 10) == "Hello, World!");
 }
-*/
+
+TEST_CASE("Decryption with Vigenere"){
+    CHECK(decryptVigenere("Jevpq, Wyvnd!", "cake") == "Hello, World!");
+    CHECK(decryptVigenere("Jevpq, Wyvnd!", "CAKE") == "Hello, World!");
+  }
